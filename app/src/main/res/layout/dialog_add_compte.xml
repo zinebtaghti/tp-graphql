@@ -1,0 +1,81 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE4E1"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Champ Montant -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Montant"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="#FFF0F5"
+            app:boxStrokeColor="#FFB6C1"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/soldeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="#880E4F" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Label Type de Compte -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Type de Compte"
+            android:textColor="#D81B60"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <!-- Choix Type de Compte côte à côte -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Bouton Courant avec style moderne -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/typeCourant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#D81B60"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Courant"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+
+            <!-- Bouton Épargne avec style moderne -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/typeEpargne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#D81B60"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Épargne"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
